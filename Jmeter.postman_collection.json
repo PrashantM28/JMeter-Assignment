@@ -1,0 +1,477 @@
+{
+	"info": {
+		"_postman_id": "93077a10-ff7f-44c2-988f-003e720cde2a",
+		"name": "Jmeter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41078804"
+	},
+	"item": [
+		{
+			"name": "LaunchURL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://advantageonlineshopping.com",
+					"protocol": "https",
+					"host": [
+						"advantageonlineshopping",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountCreateRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/xml",
+						"type": "text"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": "text/xml; charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n    <soap:Body>\r\n        <AccountCreateRequest xmlns=\"com.advantage.online.store.accountservice\">\r\n            <accountType>USER</accountType>\r\n            <address>29-08 Gaya Bangsar</address>\r\n            <allowOffersPromotion>true</allowOffersPromotion>\r\n            <cityName>Kuala Lumpur</cityName>\r\n            <countryId>Malaysia,my</countryId>\r\n            <email>test4@gmail.com</email>\r\n            <firstName>Prashant</firstName>\r\n            <lastName>Malik</lastName>\r\n            <loginName>test4</loginName>\r\n            <password>Test@123</password>\r\n            <phoneNumber>+60178065425</phoneNumber>\r\n            <stateProvince>Bangsar</stateProvince>\r\n            <zipcode>54000</zipcode>\r\n        </AccountCreateRequest>\r\n    </soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://advantageonlineshopping.com/accountservice/ws/AccountCreateRequest",
+					"protocol": "https",
+					"host": [
+						"advantageonlineshopping",
+						"com"
+					],
+					"path": [
+						"accountservice",
+						"ws",
+						"AccountCreateRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountLogin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<soap:Envelope\r\n\txmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n\txmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n\t<soap:Body>\r\n\t\t<AccountLoginRequest\r\n\t\t\txmlns=\"com.advantage.online.store.accountservice\">\r\n\t\t\t<email></email>\r\n\t\t\t<loginPassword>Password01</loginPassword>\r\n\t\t\t<loginUser>Appfuxion01</loginUser>\r\n\t\t</AccountLoginRequest>\r\n\t</soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://advantageonlineshopping.com/accountservice/ws/AccountLoginRequest",
+					"protocol": "https",
+					"host": [
+						"advantageonlineshopping",
+						"com"
+					],
+					"path": [
+						"accountservice",
+						"ws",
+						"AccountLoginRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://advantageonlineshopping.com/catalog/api/v1/categories/4/products",
+					"protocol": "https",
+					"host": [
+						"advantageonlineshopping",
+						"com"
+					],
+					"path": [
+						"catalog",
+						"api",
+						"v1",
+						"categories",
+						"4",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://advantageonlineshopping.com/catalog/api/v1/products/20",
+					"protocol": "https",
+					"host": [
+						"advantageonlineshopping",
+						"com"
+					],
+					"path": [
+						"catalog",
+						"api",
+						"v1",
+						"products",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quantity",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QXBwZnV4aW9uMDE6UGFzc3dvcmQwMQ==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://advantageonlineshopping.com/order/api/v1/carts/354133523/product/20/color/414141?quantity=2",
+					"protocol": "https",
+					"host": [
+						"advantageonlineshopping",
+						"com"
+					],
+					"path": [
+						"order",
+						"api",
+						"v1",
+						"carts",
+						"354133523",
+						"product",
+						"20",
+						"color",
+						"414141"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addToCart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdDU6VGVzdEAxMjM=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://advantageonlineshopping.com/order/api/v1/carts/905591646",
+					"protocol": "https",
+					"host": [
+						"advantageonlineshopping",
+						"com"
+					],
+					"path": [
+						"order",
+						"api",
+						"v1",
+						"carts",
+						"905591646"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddMasterCreditMethodRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/xml",
+						"type": "text"
+					},
+					{
+						"key": "content-type",
+						"value": "text/xml; charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n    <soap:Body>\r\n        <AddMasterCreditMethodRequest xmlns=\"com.advantage.online.store.accountservice\">\r\n            <cardNumber>4886123412341234</cardNumber>\r\n            <expirationDate>122027</expirationDate>\r\n            <cvvNumber>366</cvvNumber>\r\n            <customerName>Prashant</customerName>\r\n            <accountId>289412313</accountId>\r\n            <base64Token>Basic dGVzdDI6VGVzdEAxMjM=</base64Token>\r\n        </AddMasterCreditMethodRequest>\r\n    </soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://advantageonlineshopping.com/accountservice/ws/AddMasterCreditMethodRequest",
+					"protocol": "https",
+					"host": [
+						"advantageonlineshopping",
+						"com"
+					],
+					"path": [
+						"accountservice",
+						"ws",
+						"AddMasterCreditMethodRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddSafePayMethodRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "text/xml; charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US",
+						"type": "text"
+					},
+					{
+						"key": "accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n    <soap:Body>\r\n        <AddSafePayMethodRequest xmlns=\"com.advantage.online.store.accountservice\">\r\n            <safePayUsername>test123</safePayUsername>\r\n            <accountId>844406935</accountId>\r\n            <safePayPassword>Apple123</safePayPassword>\r\n            <base64Token>Basic dGVzdDpUZXN0QDEyMw==</base64Token>\r\n        </AddSafePayMethodRequest>\r\n    </soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://advantageonlineshopping.com/accountservice/ws/AddSafePayMethodRequest",
+					"protocol": "https",
+					"host": [
+						"advantageonlineshopping",
+						"com"
+					],
+					"path": [
+						"accountservice",
+						"ws",
+						"AddSafePayMethodRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateMasterCreditMethodRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=UTF-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n    <soap:Body>\r\n        <UpdateMasterCreditMethodRequest xmlns=\"com.advantage.online.store.accountservice\">\r\n            <userId>844406935</userId>\r\n            <cardNumber>4886488612221234</cardNumber>\r\n            <expirationDate>122027</expirationDate>\r\n            <cvvNumber>123</cvvNumber>\r\n            <customerName>Prashant</customerName>\r\n            <referenceId>1234567890</referenceId>\r\n            <base64Token>Basic dGVzdDpUZXN0QDEyMw==</base64Token>\r\n        </UpdateMasterCreditMethodRequest>\r\n    </soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://advantageonlineshopping.com/accountservice/ws/UpdateMasterCreditMethodRequest",
+					"protocol": "https",
+					"host": [
+						"advantageonlineshopping",
+						"com"
+					],
+					"path": [
+						"accountservice",
+						"ws",
+						"UpdateMasterCreditMethodRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept-language",
+						"value": "en-US",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdDU6VGVzdEAxMjM=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderPaymentInformation\": {\r\n        \"Transaction_AccountNumber\": \"112987298763\",\r\n        \"Transaction_Currency\": \"USD\",\r\n        \"Transaction_CustomerPhone\": \"\",\r\n        \"Transaction_MasterCredit_CVVNumber\": 123,\r\n        \"Transaction_MasterCredit_CardNumber\": \"4886488612221234\",\r\n        \"Transaction_MasterCredit_CustomerName\": \"Prashant\",\r\n        \"Transaction_MasterCredit_ExpirationDate\": \"122027\",\r\n        \"Transaction_PaymentMethod\": \"MasterCredit\",\r\n        \"Transaction_ReferenceNumber\": 0,\r\n        \"Transaction_SafePay_Password\": \"\",\r\n        \"Transaction_SafePay_UserName\": \"\",\r\n        \"Transaction_TransactionDate\": \"28012025\",\r\n        \"Transaction_Type\": \"PAYMENT\"\r\n    },\r\n    \"orderShippingInformation\": {\r\n        \"Shipping_Address_Address\": \"\",\r\n        \"Shipping_Address_City\": \"\",\r\n        \"Shipping_Address_CountryCode\": 40,\r\n        \"Shipping_Address_CustomerName\": \"Test Malik\",\r\n        \"Shipping_Address_CustomerPhone\": \"\",\r\n        \"Shipping_Address_PostalCode\": \"\",\r\n        \"Shipping_Address_State\": \"\",\r\n        \"Shipping_Cost\": 1079.96,\r\n        \"Shipping_NumberOfProducts\": 4,\r\n        \"Shipping_TrackingNumber\": 0\r\n    },\r\n    \"purchasedProducts\": [\r\n        {\r\n            \"hexColor\": \"414141\",\r\n            \"productId\": 20,\r\n            \"quantity\": 4,\r\n            \"hasWarranty\": false\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://advantageonlineshopping.com/order/api/v1/orders/users/905591646",
+					"protocol": "https",
+					"host": [
+						"advantageonlineshopping",
+						"com"
+					],
+					"path": [
+						"order",
+						"api",
+						"v1",
+						"orders",
+						"users",
+						"905591646"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept-language",
+						"value": "en-US",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdDU6VGVzdEAxMjM=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://advantageonlineshopping.com/order/api/v1/carts/905591646",
+					"protocol": "https",
+					"host": [
+						"advantageonlineshopping",
+						"com"
+					],
+					"path": [
+						"order",
+						"api",
+						"v1",
+						"carts",
+						"905591646"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
